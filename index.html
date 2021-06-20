@@ -7,6 +7,7 @@
 <head>
 <style>
 * {
+background: #A7fff6;
 box-sizing:border-box;
 padding:0;
 margin:0;
@@ -18,11 +19,13 @@ width:100%;
 }
 span#namezzz{
 float:left;
-background: #e4e4e4;
+background: #A4F9C8;
+height:45px;
+padding:0;
 }
 ul {
 	text-align:center;
-	background: #e4e4e4;
+	background: #A4F9C8;
 	margin:0;
 	height:45px;
 	padding:0;
@@ -33,27 +36,27 @@ ul {
 
 li {
 	display:inline;
-	background: #e4e4e4;
+	background: #A4F9C8;
 	text-align: center;
-	height:40px;
+	height:45px;
 	padding: 12px 10px 14px 10px;
-	line-height:40px;
+	line-height:45px;
 	font-size: 15px;
 	margin:0;
 	width:15px;
 }
-li:hover {
-	background: #d4d4d4;
-	}
+/*li:hover {
+	background: #5C6F68;
+	}*/
 a {
 text-decoration: none;
-background: #A7FFF6;
+background: #A4F9C8;
 color:black;
 padding: 12px 10px 14px 10px;
 }
 a:hover {
-background: #A7FFF6;
-   
+background: #5C6F68;
+
 }
 #generated {
 display:block;
@@ -61,7 +64,7 @@ margin:0 auto;
 text-align:center;
 font-size:48px;
 width:100%;
-background:white;
+background: #A7fff6;
 margin-top:200px;
 position:static;
 color:#A7FFF6;
@@ -74,6 +77,7 @@ padding:10px 25px;
 font-size:24px;
 background:#A4F9C8;
 border:none;
+border-radius: 20px
 
 }
 button:hover {
@@ -87,8 +91,8 @@ outline:none;
 <body>
 <div id="container">
 <ul>
-	<span id="namezzz"><li>Generator</li>
-	<li id="homez"><a href="clairepurslow.github.io">Home</a></li>
+	<span id="namezzz"><li>Aesthetic Generator</li>
+	<!---<li id="homez"><a href="clairepurslow.github.io">Home</a></li>-->
 	<span>
 </ul>
 
@@ -96,7 +100,7 @@ outline:none;
 <button type="button" onclick="generateName()">Generate</button>
 </div>
 <script>
-var firstWord = ["tiny","quiet","gay","pandemic","trans","lesbian","dad","mom","mermaid","egg","pale","sea","piss","witch","pokemon","plant","nature","garden","bitcoin","sports","gender","rave","hell","abyss","soft","furry","sloth","trash","lace","communist","capitalism","pastel","trans","hetero","golf","berry","forest","cave","glitch","worm","swamp","bog","cis","trump","obama","starbucks","night","glow","anime","emo","rat","meme","soccer","sweet","dream","dad","ghost","lizard","moon","space","celestial","ass","ocean","star","glitter","snail","alien","crystal","gem","storm","rain","naruto","consumerism","business","pirate","the capitalist system is a scourge on the earth","bean","bug","flower","pasta","gordon ramsay","mud","algae","pixel","church","fairy","vampire","werewolf","fashion","les mis","weed","lamb","soap","bird","meadow","country","romney","acid","slime","political","mermaid","hot topic","shimmer","gore","moss","disease","virus","milk","bread","urban","mom","grandpa","vintage","retro","60s","90s","medieval","tacky","kitsch","hipster","sun","preppy","beach","sad","glam","brony","fedora","crab","cyber","gothic","monolith","circus","carnival","woodland","leaf","honey","stormy","priest","church","marine","aquatic","scifi","20s","death","garbage","skeleton","soccer","cactus","creepy","kitschy","kaleidoscope","victorian","futuristic","royal","occult","ethereal","fox","insect","arachnid","halloween","nebula","black hole","masculine","feminine","molten","lava","plasma","formal","angel","angelic","demonic","edgy","opulent","sewer","techno","asian","western"];
+var firstWord = ["tiny","quiet","gay","pandemic","trans","lesbian","dad","mom","mermaid","egg","pale","sea","piss","witch","pokemon","plant","nature","garden","bitcoin","sports","gender","rave","hell","abyss","soft","furry","sloth","trash","lace","communist","capitalism","pastel","trans","hetero","golf","berry","forest","cave","glitch","worm","swamp","bog","cis","starbucks","night","glow","anime","emo","rat","meme","soccer","sweet","dream","dad","ghost","lizard","moon","space","celestial","ass","ocean","star","glitter","snail","alien","crystal","gem","storm","rain","naruto","consumerism","business","pirate","the capitalist system is a scourge on the earth","bean","bug","flower","pasta","gordon ramsay","mud","algae","pixel","church","fairy","vampire","werewolf","fashion","les mis","weed","lamb","soap","bird","meadow","country","romney","acid","slime","political","mermaid","hot topic","shimmer","gore","moss","disease","virus","milk","bread","urban","mom","grandpa","vintage","retro","60s","90s","medieval","tacky","kitsch","hipster","sun","preppy","beach","sad","glam","brony","fedora","crab","cyber","gothic","monolith","circus","carnival","woodland","leaf","honey","stormy","priest","church","marine","aquatic","scifi","20s","death","garbage","skeleton","soccer","cactus","creepy","kitschy","kaleidoscope","victorian","futuristic","royal","occult","ethereal","fox","insect","arachnid","halloween","nebula","black hole","masculine","feminine","molten","lava","plasma","formal","angel","angelic","demonic","edgy","opulent","sewer","techno","western"];
 var secondWord = ["overlord","machine","gay","dad","mom","dragon","mermaid","deity","core","jock","witch","grunge","emo","wave","dad","rave","hippie","deity","farmer","memecore","vintage","retro","hipster","brony","priest","flapper","squid","garbage","skeleton","bro","demon","spirit","bug","ghost","piece of shit","abomination","bad guy","band geek","badger","dinosaur","lover","trash","volcano","pride"];
 function generateName() {
 	document.getElementById("generated").style.color = "black";
@@ -104,7 +108,7 @@ function generateName() {
 	var sWnum = Math.floor(Math.random() * secondWord.length);
 	var named = firstWord[fWnum] + " " + secondWord[sWnum];
     document.getElementById("generated").innerHTML = named;
-    
+
 }
 
 </script>
