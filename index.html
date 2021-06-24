@@ -102,7 +102,7 @@ var secondWord = ["overlord","machine","gay","lesbian","dad","mom","dragon","mer
 function generateName() {
 	document.getElementById("generated").style.color = "black";
 	var fWnum = Math.floor(Math.random() * firstWord.length);
-	if (firstWord[fWnum] == "trans") OR (firstWord[fWnum] == "gay") OR (firstWord[fWnum] == "lesbian") {
+	if ((firstWord[fWnum] == "trans") || (firstWord[fWnum] == "gay") || (firstWord[fWnum] == "lesbian")) {
 		var sWnum = Math.floor(Math.random() * (secondWord.length - 4));
 	}
 	else {
