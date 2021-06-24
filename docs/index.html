@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<head>
+<style>
+* {
+background: #A7fff6;
+box-sizing:border-box;
+padding:0;
+margin:0;
+font-family: 'Lato', sans-serif;
+}
+
+#container {
+width:100%;
+}
+span#namezzz{
+float:left;
+background: #A4F9C8;
+height:45px;
+padding:0;
+}
+ul {
+	text-align:center;
+	background: #A4F9C8;
+	margin:0;
+	height:45px;
+	padding:0;
+	list-style-type:none;
+	text-decoration: none;
+	cursor: default;
+}
+
+li {
+	display:inline;
+	background: #A4F9C8;
+	text-align: center;
+	height:45px;
+	padding: 12px 10px 14px 10px;
+	line-height:45px;
+	font-size: 15px;
+	margin:0;
+	width:15px;
+}
+/*li:hover {
+	background: #5C6F68;
+	}*/
+a {
+text-decoration: none;
+background: #A4F9C8;
+color:black;
+padding: 12px 10px 14px 10px;
+}
+a:hover {
+background: #5C6F68;
+
+}
+#generated {
+display:block;
+margin:0 auto;
+text-align:center;
+font-size:48px;
+width:100%;
+background: #A7fff6;
+margin-top:200px;
+position:static;
+color:#A7FFF6;
+}
+button {
+display:block;
+position:static;
+margin:50px auto 50px auto;
+padding:10px 25px;
+font-size:24px;
+background:#A4F9C8;
+border:none;
+border-radius: 20px
+
+}
+button:hover {
+background:#95d9c3;
+}
+button:focus {
+outline:none;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<ul>
+	<span id="namezzz"><li>Aesthetic Generator</li>
+	<!---<li id="homez"><a href="clairepurslow.github.io">Home</a></li>-->
+	<span>
+</ul>
+
+<div id="generated">.</div>
+<button type="button" onclick="generateName()">Generate</button>
+</div>
+<script>
+var firstWord = ["tiny","quiet","gay","pandemic","trans","lesbian","dad","mom","mermaid","egg","pale","sea","piss","witch","pokemon","plant","nature","garden","bitcoin","sports","gender","rave","hell","abyss","soft","furry","sloth","lace","communist","capitalism","pastel","trans","hetero","golf","berry","forest","tree","cave","glitch","worm","swamp","bog","cis","starbucks","coffee","night","glow","anime","emo","rat","meme","soccer","sweet","dream","dad","ghost","lizard","moon","space","celestial","ass","ocean","star","glitter","snail","alien","crystal","gem","storm","rain","naruto","consumerism","business","pirate","the capitalist system is a scourge on the earth","bean","bug","flower","pasta","gordon ramsay","mud","algae","pixel","church","fairy","vampire","werewolf","fashion","les mis","weed","lamb","soap","bird","meadow","country","acid","slime","political","mermaid","hot topic","shimmer","gore","moss","ancient","disease","virus","milk","bread","pancake","urban","mom","grandpa","vintage","retro","60s","90s","medieval","tacky","kitsch","hipster","sun","preppy","beach","sad","glam","brony","fedora","crab","cyber","gothic","monolith","circus","carnival","woodland","teenage","leaf","honey","stormy","priest","church","marine","aquatic","scifi","20s","death","garbage","skeleton","soccer","cactus","creepy","kitschy","kaleidoscope","victorian","futuristic","royal","occult","ethereal","fox","insect","vague","milkshake","arachnid","halloween","nebula","rainbow","animal","feral","black hole","masculine","feminine","molten","lava","plasma","formal","angel","angelic","demonic","edgy","opulent","sewer","techno","western"];
+var secondWord = ["overlord","machine","gay","lesbian","dad","mom","dragon","mermaid","deity","core","jock","witch","grunge","emo","wave","dad","rave","hippie","deity","farmer","memecore","vintage","retro","hipster","brony","priest","flapper","squid","garbage","skeleton","bro","demon","spirit","bug","ghost","band geek","badger","dinosaur","lover","trash","volcano","pride","denier","gremlin","abomination","bad guy"];
+function generateName() {
+	document.getElementById("generated").style.color = "black";
+	var fWnum = Math.floor(Math.random() * firstWord.length);
+	if ((firstWord[fWnum] == "trans") || (firstWord[fWnum] == "gay") || (firstWord[fWnum] == "lesbian")) {
+		var sWnum = Math.floor(Math.random() * (secondWord.length - 4));
+	}
+	else {
+		var sWnum = Math.floor(Math.random() * secondWord.length);
+	}
+	while (fWnum == sWnum) {
+		var sWnum = Math.floor(Math.random() * secondWord.length);
+	}
+	var named = firstWord[fWnum] + " " + secondWord[sWnum];
+  document.getElementById("generated").innerHTML = named;
+}
+</script>
+</body>
+</html>
