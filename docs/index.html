@@ -108,7 +108,7 @@ function generateName() {
 	else {
 		var sWnum = Math.floor(Math.random() * secondWord.length);
 	}
-	while (fWnum == sWnum) {
+	while (firstWord[fWnum] == secondWord[sWnum]) {
 		var sWnum = Math.floor(Math.random() * secondWord.length);
 	}
 	var named = firstWord[fWnum] + " " + secondWord[sWnum];
