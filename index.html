@@ -97,13 +97,13 @@ outline:none;
 <button type="button" onclick="generateName()">Generate</button>
 </div>
 <script>
-var firstWord = ["tiny","quiet","gay","pandemic","trans","lesbian","dad","mom","mermaid","egg","pale","sea","piss","witch","pokemon","plant","nature","garden","bitcoin","sports","gender","rave","hell","abyss","soft","furry","sloth","trash","lace","communist","capitalism","pastel","trans","hetero","golf","berry","forest","cave","glitch","worm","swamp","bog","cis","starbucks","night","glow","anime","emo","rat","meme","soccer","sweet","dream","dad","ghost","lizard","moon","space","celestial","ass","ocean","star","glitter","snail","alien","crystal","gem","storm","rain","naruto","consumerism","business","pirate","the capitalist system is a scourge on the earth","bean","bug","flower","pasta","gordon ramsay","mud","algae","pixel","church","fairy","vampire","werewolf","fashion","les mis","weed","lamb","soap","bird","meadow","country","romney","acid","slime","political","mermaid","hot topic","shimmer","gore","moss","disease","virus","milk","bread","urban","mom","grandpa","vintage","retro","60s","90s","medieval","tacky","kitsch","hipster","sun","preppy","beach","sad","glam","brony","fedora","crab","cyber","gothic","monolith","circus","carnival","woodland","leaf","honey","stormy","priest","church","marine","aquatic","scifi","20s","death","garbage","skeleton","soccer","cactus","creepy","kitschy","kaleidoscope","victorian","futuristic","royal","occult","ethereal","fox","insect","arachnid","halloween","nebula","rainbow","animal","feral","black hole","masculine","feminine","molten","lava","plasma","formal","angel","angelic","demonic","edgy","opulent","sewer","techno","western"];
-var secondWord = ["overlord","machine","gay","lesbian","dad","mom","dragon","mermaid","deity","core","jock","witch","grunge","emo","wave","dad","rave","hippie","deity","farmer","memecore","vintage","retro","hipster","brony","priest","flapper","squid","garbage","skeleton","bro","demon","spirit","bug","ghost","band geek","badger","dinosaur","lover","trash","volcano","pride","abomination","bad guy"];
+var firstWord = ["tiny","quiet","gay","pandemic","trans","lesbian","dad","mom","mermaid","egg","pale","sea","piss","witch","pokemon","plant","nature","garden","bitcoin","sports","gender","rave","hell","abyss","soft","furry","sloth","lace","communist","capitalism","pastel","trans","hetero","golf","berry","forest","tree","cave","glitch","worm","swamp","bog","cis","starbucks","coffee","night","glow","anime","emo","rat","meme","soccer","sweet","dream","dad","ghost","lizard","moon","space","celestial","ass","ocean","star","glitter","snail","alien","crystal","gem","storm","rain","naruto","consumerism","business","pirate","the capitalist system is a scourge on the earth","bean","bug","flower","pasta","gordon ramsay","mud","algae","pixel","church","fairy","vampire","werewolf","fashion","les mis","weed","lamb","soap","bird","meadow","country","acid","slime","political","mermaid","hot topic","shimmer","gore","moss","ancient","disease","virus","milk","bread","pancake","urban","mom","grandpa","vintage","retro","60s","90s","medieval","tacky","kitsch","hipster","sun","preppy","beach","sad","glam","brony","fedora","crab","cyber","gothic","monolith","circus","carnival","woodland","teenage","leaf","honey","stormy","priest","church","marine","aquatic","scifi","20s","death","garbage","skeleton","soccer","cactus","creepy","kitschy","kaleidoscope","victorian","futuristic","royal","occult","ethereal","fox","insect","vague","milkshake","arachnid","halloween","nebula","rainbow","animal","feral","black hole","masculine","feminine","molten","lava","plasma","formal","angel","angelic","demonic","edgy","opulent","sewer","techno","western"];
+var secondWord = ["overlord","machine","gay","lesbian","dad","mom","dragon","mermaid","deity","core","jock","witch","grunge","emo","wave","dad","rave","hippie","deity","farmer","memecore","vintage","retro","hipster","brony","priest","flapper","squid","garbage","skeleton","bro","demon","spirit","bug","ghost","band geek","badger","dinosaur","lover","trash","volcano","pride","denier","gremlin","abomination","bad guy"];
 function generateName() {
 	document.getElementById("generated").style.color = "black";
 	var fWnum = Math.floor(Math.random() * firstWord.length);
-	if (fWnum == "trans") {
-		var sWnum = Math.floor(Math.random() * (secondWord.length - 2));
+	if (firstWord[fWnum] == "trans") OR (firstWord[fWnum] == "gay") OR (firstWord[fWnum] == "lesbian") {
+		var sWnum = Math.floor(Math.random() * (secondWord.length - 4));
 	}
 	else {
 		var sWnum = Math.floor(Math.random() * secondWord.length);
@@ -114,7 +114,6 @@ function generateName() {
 	var named = firstWord[fWnum] + " " + secondWord[sWnum];
   document.getElementById("generated").innerHTML = named;
 }
-
 </script>
 </body>
 </html>
